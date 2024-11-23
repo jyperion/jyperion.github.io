@@ -91,21 +91,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
             navLinks.classList.toggle('show');
         });
-    }
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (navLinks && navLinks.classList.contains('show') &&
-            !e.target.closest('.nav-links') &&
-            !e.target.closest('.nav-toggle')) {
-            navLinks.classList.remove('show');
-            navToggle.classList.remove('active');
-        }
-    });
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+    }
 
     // Set active nav link based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';

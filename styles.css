@@ -427,21 +427,25 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background: white;
-        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
         padding: 1rem;
-        gap: 1rem;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .nav-links.active {
+    .nav-links.show {
         display: flex;
     }
 
-    .nav-links a {
-        padding: 0.75rem 1rem;
-        display: block;
+    .nav-links li {
         width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.8rem;
     }
 }
 
