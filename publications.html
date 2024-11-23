@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Jyothish Soman</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Jyothish Soman</a>
+            <button class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="industry.html">Industry</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section class="publications-section">
+                <h1>Publications</h1>
+                <p class="publications-summary">Selected publications from my research work in machine learning and
+                    artificial intelligence.</p>
+
+                <div class="publications-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="gpu">GPU & HPC</button>
+                    <button class="filter-btn" data-filter="architecture">Computer Architecture</button>
+                    <button class="filter-btn" data-filter="ml">Machine Learning & Drug Discovery</button>
+                    <button class="filter-btn" data-filter="systems">Systems & Tools</button>
+                </div>
+
+                <div class="publications-grid">
+                    <!-- ML & Drug Discovery Publications -->
+                    <div class="publication-card" data-categories="ml">
+                        <h3>Utilizing graph machine learning within drug discovery and development</h3>
+                        <p class="authors">Gaudelet, T., Day, B., Jamasb, A.R., Soman, J., et al.</p>
+                        <p class="venue">Briefings in bioinformatics</p>
+                        <p class="year">2021</p>
+                        <div class="publication-abstract">
+                            <p>Comprehensive study on applications of graph machine learning in drug discovery and
+                                development processes.</p>
+                        </div>
+                    </div>
+
+                    <div class="publication-card" data-categories="ml">
+                        <h3>PyRelationAL: A Library for Active Learning Research and Development</h3>
+                        <p class="authors">Scherer, P., Gaudelet, T., Pouplin, A., Suraj, MS., Soman, J., et al.</p>
+                        <p class="venue">CoRR</p>
+                        <p class="year">2022</p>
+                    </div>
+
+                    <!-- Architecture & Fault Tolerance -->
+                    <div class="publication-card" data-categories="architecture">
+                        <h3>A Performance-efficient and practical processor error recovery framework</h3>
+                        <p class="authors">Soman, J.</p>
+                        <p class="venue">University of Cambridge, Computer Laboratory Technical Report</p>
+                        <p class="year">2019</p>
+                    </div>
+
+                    <div class="publication-card" data-categories="architecture">
+                        <h3>REPAIR: Hard-error recovery via re-execution</h3>
+                        <p class="authors">Soman, J., Miralaei, N., Mycroft, A., Jones, T.M.</p>
+                        <p class="venue">IEEE International Symposium on Defect and Fault Tolerance in VLSI and
+                            Nanotechnology Systems</p>
+                        <p class="year">2015</p>
+                    </div>
+
+                    <!-- GPU & HPC Publications -->
+                    <div class="publication-card" data-categories="gpu">
+                        <h3>Some GPU algorithms for graph connected components and spanning tree</h3>
+                        <p class="authors">Soman, J., Kothapalli, K., Narayanan, P.J.</p>
+                        <p class="venue">Parallel Processing Letters</p>
+                        <p class="year">2010</p>
+                        <div class="publication-impact">
+                            <p>Seminal work on GPU-based graph algorithms</p>
+                        </div>
+                    </div>
+
+                    <div class="publication-card" data-categories="gpu">
+                        <h3>Fast community detection algorithm with GPUs and multicore architectures</h3>
+                        <p class="authors">Soman, J., Narang, A.</p>
+                        <p class="venue">IEEE International Parallel & Distributed Processing Symposium</p>
+                        <p class="year">2011</p>
+                    </div>
+
+                    <div class="publication-card" data-categories="gpu">
+                        <h3>Discrete range searching primitive for the GPU and its applications</h3>
+                        <p class="authors">Soman, J., Kothapalli, K., Narayanan, P.J.</p>
+                        <p class="venue">Journal of Experimental Algorithmics</p>
+                        <p class="year">2012</p>
+                    </div>
+
+                    <!-- Systems & Tools -->
+                    <div class="publication-card" data-categories="systems">
+                        <h3>Structural Analysis of Whole-System Provenance Graphs</h3>
+                        <p class="authors">Soman, J., Bytheway, T., Carata, L., et al.</p>
+                        <p class="venue">International Provenance and Annotation Workshop</p>
+                        <p class="year">2018</p>
+                    </div>
+
+                    <div class="publication-card" data-categories="systems">
+                        <h3>Distributed data scalable adaptive map-reduce framework</h3>
+                        <p class="authors">Narang, A., Soman, J.</p>
+                        <p class="venue">US Patent 9,053,067</p>
+                        <p class="year">2015</p>
+                    </div>
+
+                    <div class="publication-card" data-categories="gpu systems">
+                        <h3>GrabFast: A CUDA based GPU accelerated fast short sequence alignment algorithm</h3>
+                        <p class="authors">Narang, A., Soman, J., Lahabar, S.</p>
+                        <p class="venue">International Conference on High Performance Computing</p>
+                        <p class="year">2012</p>
+                    </div>
+                </div>
+
+                <script>
+                    document.querySelectorAll('.filter-btn').forEach(button => {
+                        button.addEventListener('click', () => {
+                            const filter = button.dataset.filter;
+
+                            // Update active button
+                            document.querySelectorAll('.filter-btn').forEach(btn => {
+                                btn.classList.remove('active');
+                            });
+                            button.classList.add('active');
+
+                            // Filter publications
+                            document.querySelectorAll('.publication-card').forEach(card => {
+                                if (filter === 'all' || card.dataset.categories.includes(filter)) {
+                                    card.style.display = 'block';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        });
+                    });
+                </script>
+
+                <div class="citation-metrics">
+                    <h2>Citation Metrics</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <h3>Total Citations</h3>
+                            <div class="metric-values">
+                                <div class="metric-total">
+                                    <span class="number">667</span>
+                                    <span class="label">All Time</span>
+                                </div>
+                                <div class="metric-recent">
+                                    <span class="number">446</span>
+                                    <span class="label">Since 2019</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <h3>h-index</h3>
+                            <div class="metric-values">
+                                <div class="metric-total">
+                                    <span class="number">9</span>
+                                    <span class="label">All Time</span>
+                                </div>
+                                <div class="metric-recent">
+                                    <span class="number">6</span>
+                                    <span class="label">Since 2019</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metric-card">
+                            <h3>i10-index</h3>
+                            <div class="metric-values">
+                                <div class="metric-total">
+                                    <span class="number">9</span>
+                                    <span class="label">All Time</span>
+                                </div>
+                                <div class="metric-recent">
+                                    <span class="number">5</span>
+                                    <span class="label">Since 2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Jyothish Soman. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

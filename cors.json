@@ -1,0 +1,7 @@
+[
+  {
+    "origin": ["https://teach-ai.net", "https://personal.teach-ai.net"],
+    "method": ["GET", "HEAD"],
+    "maxAgeSeconds": 3600
+  }
+]
