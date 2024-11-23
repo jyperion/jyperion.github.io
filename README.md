@@ -58,11 +58,7 @@ This is my personal portfolio website hosted on GitHub Pages, showcasing my acad
 ## Automated Workflows
 - `.github/workflows/update-scholar-stats.yml` - Daily workflow to update research metrics
 
-## Contact
-Jyothish Soman
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [Your GitHub Profile]
+
 
 ## License
 This project is open source and available under the [MIT License].
