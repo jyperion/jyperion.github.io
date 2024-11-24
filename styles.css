@@ -1412,3 +1412,98 @@ main {
     font-size: 0.9rem;
     margin-top: 1rem;
 }
+
+/* Research Page Specific Styles */
+.research-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.research-section h1 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.research-summary {
+    color: #555;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* Research Areas and Grid Layouts */
+.research-grid, .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Cards within Grids */
+.research-card, .highlight-card, .interest-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.research-card h3, .highlight-card h3, .interest-card h3 {
+    color: #007bff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Section Styles */
+.research-areas, .research-highlights, .research-impact, .research-interests {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 2rem;
+}
+
+.research-areas h2, .research-highlights h2, .research-impact h2, .research-interests h2 {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Research Impact Specific */
+.research-impact .impact-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.research-impact .impact-content li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: #555;
+    line-height: 1.6;
+}
+
+.research-impact .impact-content li:before {
+    content: "•";
+    color: #007bff;
+    position: absolute;
+    left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .research-grid, .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .research-grid, .interests-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .research-section {
+        padding: 1rem;
+    }
+}
