@@ -46,10 +46,8 @@
 <p class="authors">Gaudelet, T., Day, B., Jamasb, A.R., Soman, J., et al.</p>
 <p class="venue">Briefings in bioinformatics</p>
 <p class="year">2021</p>
-<button class="collapse-btn">Show Abstract</button>
-<div class="publication-abstract collapsed">
-<p>Comprehensive study on applications of graph machine learning in drug discovery and
-                                development processes.</p>
+<div class="publication-abstract">
+<p>Comprehensive study on applications of graph machine learning in drug discovery and development processes.</p>
 </div>
 </div>
 <div class="publication-card" data-categories="ml">
@@ -78,8 +76,7 @@
 <p class="authors">Soman, J., Kothapalli, K., Narayanan, P.J.</p>
 <p class="venue">Parallel Processing Letters</p>
 <p class="year">2010</p>
-<button class="collapse-btn">Show Impact</button>
-<div class="publication-impact collapsed">
+<div class="publication-impact">
 <p>Seminal work on GPU-based graph algorithms</p>
 </div>
 </div>
@@ -116,39 +113,28 @@
 </div>
 </div>
 <script>
-                    // Filter functionality
-                    document.querySelectorAll('.filter-btn').forEach(button => {
-                        button.addEventListener('click', () => {
-                            const filter = button.dataset.filter;
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
 
-                            // Update active button
-                            document.querySelectorAll('.filter-btn').forEach(btn => {
-                                btn.classList.remove('active');
-                            });
-                            button.classList.add('active');
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
 
-                            // Filter publications
-                            document.querySelectorAll('.publication-card').forEach(card => {
-                                if (filter === 'all' || card.dataset.categories.includes(filter)) {
-                                    card.style.display = 'block';
-                                } else {
-                                    card.style.display = 'none';
-                                }
-                            });
-                        });
-                    });
-
-                    // Collapse functionality
-                    document.querySelectorAll('.collapse-btn').forEach(button => {
-                        button.addEventListener('click', () => {
-                            const content = button.nextElementSibling;
-                            content.classList.toggle('collapsed');
-                            button.textContent = content.classList.contains('collapsed') ? 
-                                'Show ' + (content.classList.contains('publication-abstract') ? 'Abstract' : 'Impact') : 
-                                'Hide ' + (content.classList.contains('publication-abstract') ? 'Abstract' : 'Impact');
-                        });
-                    });
-                </script>
+            // Filter publications
+            document.querySelectorAll('.publication-card').forEach(card => {
+                if (filter === 'all' || card.dataset.categories.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
 <div class="citation-metrics">
 <h2>Citation Metrics</h2>
 <div class="metrics-grid">
