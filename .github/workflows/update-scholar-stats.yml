@@ -34,5 +34,5 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add research.html
+        git add publications.html
         git diff --quiet && echo "No changes to commit" || (git commit -m "Update scholar stats" && git push)
